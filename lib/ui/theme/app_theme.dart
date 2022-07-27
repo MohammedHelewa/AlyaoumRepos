@@ -4,10 +4,10 @@ import 'package:flutter/material.dart';
 class AppTheme {
   static ThemeData appTheme = ThemeData(
     fontFamily: 'Tajawal',
-    colorScheme: ColorScheme.fromSwatch(accentColor: AppColors.primaryColor,primarySwatch: Colors.blue),
-    textSelectionTheme: const TextSelectionThemeData(cursorColor: AppColors.primaryColor),
+    colorScheme: ColorScheme.fromSwatch(accentColor: kPrimaryColor,primarySwatch: Colors.blue),
+    textSelectionTheme: const TextSelectionThemeData(cursorColor: kPrimaryColor),
     appBarTheme: const AppBarTheme(
-      iconTheme: IconThemeData(color: AppColors.primaryColor)
+      iconTheme: IconThemeData(color: kPrimaryColor)
     ),
   );
 }
