@@ -1,7 +1,7 @@
 import 'package:alyaoum/common/app_libraries.dart';
 
-class NewsListViewComponent extends StatelessWidget {
-  const NewsListViewComponent({Key? key}) : super(key: key);
+class NewsComponent extends StatelessWidget {
+  const NewsComponent({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -1,7 +1,8 @@
 import 'package:alyaoum/common/app_libraries.dart';
 
 import '../components/hot_menu_component.dart';
-import '../components/news_list_view_component.dart';
+import '../components/news_component.dart';
+import '../components/weather_component.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -19,8 +20,9 @@ class _HomeScreenState extends State<HomeScreen> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          const WeatherComponent(),
           HotMenuComponent(text: 'اخبار الجالية', selectedMenuItemIndex: selectedMenuItemIndex),
-          const NewsListViewComponent(),
+          const NewsComponent(),
         ],
       ),
     );
