@@ -11,30 +11,54 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      physics: const BouncingScrollPhysics(),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          SizedBox(
+            height: 60.h,
+            child: ListView.separated(
+            itemCount: 10,
+            scrollDirection: Axis.horizontal,
+              physics: const BouncingScrollPhysics(),
+              padding: EdgeInsets.symmetric(
+                  horizontal: Sizes.horizontal_15,
+                  vertical: 10.h),
+            separatorBuilder: (BuildContext context, int index) => SizedBox(width: 10.w),
+            itemBuilder: (context, index) => const ChoiceChip(
+              label: CustomText('اخبار الجالية',
+                  fontSize: 14,
+                  fontWeight: FontWeight.w500,
+                fontColor: kGrayColor,
+              ),
+              selected: true,
+              backgroundColor: Colors.transparent,
+              selectedColor: Colors.transparent,
+              side: BorderSide(
+                color: kBlackColor,
+              ),
+            ),
+            ),
+          ),
           ListView.separated(
             itemCount: 5,
             primary: false,
             shrinkWrap: true,
             physics: const NeverScrollableScrollPhysics(),
             padding: EdgeInsets.symmetric(
-                horizontal: AppSizer.horizontal_8,
-                vertical: AppSizer.vertical_15),
-            separatorBuilder: (BuildContext context, int index) =>
-                SizedBox(height: 15.h),
+                horizontal: Sizes.horizontal_15,
+                vertical: Sizes.vertical_15),
+            separatorBuilder: (BuildContext context, int index) => SizedBox(height: 15.h),
             itemBuilder: (context, index) => InkWell(
               onTap: () {},
-              borderRadius: BorderRadius.circular(AppSizer.radius_10),
+              borderRadius: BorderRadius.circular(Sizes.radius_10),
               child: Ink(
                 width: double.infinity,
                 height: 400.h,
                 decoration: BoxDecoration(
-                  color: kWhitColor,
+                  color: kWhiteColor,
                   boxShadow: AppShadows.boxShadow,
                   borderRadius:
-                      BorderRadiusDirectional.circular(AppSizer.radius_10),
+                      BorderRadiusDirectional.circular(Sizes.radius_10),
                 ),
                 child: Column(
                   children: [
@@ -51,9 +75,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     Expanded(
                         child: Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(
-                          AppSizer.horizontal_8,
+                          Sizes.horizontal_15,
                           12.h,
-                          AppSizer.horizontal_8,
+                          Sizes.horizontal_15,
                           0),
                       child: Column(children: [
                         const CustomText(
@@ -89,7 +113,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   label: CustomText('سياسة',
                                       fontSize: 10,
                                       fontWeight: FontWeight.w600),
-                                  backgroundColor: kWhitColor,
+                                  backgroundColor: kWhiteColor,
                                   side: BorderSide(
                                     color: kBlackColor,
                                   ),
@@ -99,7 +123,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   label: CustomText('24/24',
                                       fontSize: 10,
                                       fontWeight: FontWeight.w600),
-                                  backgroundColor: kWhitColor,
+                                  backgroundColor: kWhiteColor,
                                   side: BorderSide(
                                     color: kBlackColor,
                                   ),

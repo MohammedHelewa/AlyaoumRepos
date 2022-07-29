@@ -1,0 +1,217 @@
+//
+//
+//
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+
+class Sizes {
+  ///IconSizes
+  static double iconSize_20 = 20.r;
+  static double iconSize_25 = 25.r;
+  static double iconSize_30 = 30.r;
+  static double iconSize_35 = 35.r;
+  static double iconSize_43 = 43.r;
+  static double iconSize_46 = 46.r;
+  static double iconSize_50 = 50.r;
+  static double iconSize_54 = 54.r;
+  static double iconSize_60 = 60.r;
+  static double iconSize_90 = 90.r;
+  static double iconSize_200 = 200.r;
+
+  ///BorderRadius
+  static double radius_8 = 8.r;
+  static double radius_10 = 10.r;
+  static double radius_15 = 15.r;
+  static double radius_16 = 16.r;
+  static double radius_18 = 18.r;
+  static double radius_20 = 20.r;
+  static double radius_25 = 25.r;
+  static double radius_30 = 30.r;
+  static double radius_35 = 35.r;
+  static double radius_40 = 40.r;
+  static double radius_45 = 45.r;
+  static double radius_50 = 50.r;
+  static double radius_60 = 60.r;
+
+  ///TextSizes
+  static double textSize_18 = 18.sp;
+  static double textSize_20 = 20.sp;
+  static double textSize_22 = 22.sp;
+  static double textSize_24 = 24.sp;
+  static double textSize_26 = 26.sp;
+  static double textSize_28 = 28.sp;
+  static double textSize_30 = 30.sp;
+  static double textSize_32 = 32.sp;
+  static double textSize_34 = 34.sp;
+  static double textSize_36 = 36.sp;
+  static double textSize_38 = 38.sp;
+  static double textSize_40 = 40.sp;
+  static double textSize_42 = 42.sp;
+  static double textSize_44 = 44.sp;
+  static double textSize_46 = 46.sp;
+  static double textSize_50 = 50.sp;
+  static double textSize_60 = 60.sp;
+  static double textSize_90 = 90.sp;
+  static double textSize_180 = 180.sp;
+
+  ///Padding all (.r)
+  static double paddingAll_3 = 3.r;
+  static double paddingAll_5 = 5.r;
+  static double paddingAll_8 = 8.r;
+  static double paddingAll_10 = 10.r;
+  static double paddingAll_12 = 12.r;
+  static double paddingAll_15 = 15.r;
+  static double paddingAll_20 = 20.r;
+  static double paddingAll_25 = 25.r;
+  static double paddingAll_35 = 35.r;
+
+  ///Padding symmetric (horizontal => .w) (vertical => .h)
+  static double horizontal_15 = 15.w;
+  static double vertical_15 = 15.h;
+
+  ///size => (.r)
+  static double size_5 = 5.r;
+  static double size_6 = 6.r;
+  static double size_8 = 8.r;
+  static double size_10 = 10.r;
+  static double size_15 = 15.r;
+  static double size_20 = 20.r;
+  static double size_25 = 25.r;
+  static double size_30 = 30.r;
+  static double size_35 = 35.r;
+  static double size_38 = 38.r;
+  static double size_40 = 40.r;
+  static double size_42 = 42.r;
+  static double size_43 = 43.r;
+  static double size_45 = 45.r;
+  static double size_50 = 50.r;
+  static double size_55 = 55.r;
+  static double size_60 = 60.r;
+  static double size_65 = 65.r;
+  static double size_70 = 70.r;
+  static double size_75 = 75.r;
+  static double size_80 = 80.r;
+  static double size_85 = 85.r;
+  static double size_90 = 90.r;
+  static double size_100 = 100.r;
+  static double size_110 = 110.r;
+  static double size_120 = 120.r;
+  static double size_130 = 130.r;
+  static double size_140 = 140.r;
+  static double size_150 = 150.r;
+  static double size_170 = 170.r;
+  static double size_180 = 180.r;
+  static double size_190 = 190.r;
+  static double size_200 = 200.r;
+  static double size_226 = 226.r;
+  static double size_235 = 235.r;
+  static double size_240 = 240.r;
+  static double size_255 = 255.r;
+  static double size_300 = 300.r;
+
+  ///Heights => (.h)
+  static double height_3 = 3.h;
+  static double height_5 = 5.h;
+  static double height_8 = 8.h;
+  static double height_10 = 10.h;
+  static double height_15 = 15.h;
+  static double height_20 = 20.h;
+  static double height_25 = 25.h;
+  static double height_30 = 30.h;
+  static double height_35 = 35.h;
+  static double height_40 = 40.h;
+  static double height_45 = 45.h;
+  static double height_50 = 50.h;
+  static double height_55 = 55.h;
+  static double height_60 = 60.h;
+  static double height_65 = 65.h;
+  static double height_70 = 70.h;
+  static double height_75 = 75.h;
+  static double height_80 = 80.h;
+  static double height_82 = 82.h;
+  static double height_90 = 90.h;
+  static double height_100 = 100.h;
+  static double height_105 = 105.h;
+  static double height_120 = 120.h;
+  static double height_135 = 135.h;
+  static double height_140 = 140.h;
+  static double height_150 = 150.h;
+  static double height_170 = 170.h;
+  static double height_180 = 180.h;
+  static double height_200 = 200.h;
+  static double height_210 = 210.h;
+  static double height_220 = 220.h;
+  static double height_230 = 230.h;
+  static double height_240 = 240.h;
+  static double height_250 = 250.h;
+  static double height_255 = 255.h;
+  static double height_258 = 258.h;
+  static double height_270 = 270.h;
+  static double height_280 = 280.h;
+  static double height_290 = 290.h;
+  static double height_300 = 300.h;
+  static double height_310 = 310.h;
+  static double height_320 = 320.h;
+  static double height_330 = 330.h;
+  static double height_350 = 350.h;
+  static double height_360 = 360.h;
+  static double height_365 = 365.h;
+  static double height_370 = 370.h;
+  static double height_375 = 375.h;
+  static double height_380 = 380.h;
+  static double height_385 = 385.h;
+  static double height_400 = 400.h;
+  static double height_440 = 440.h;
+  static double height_450 = 450.h;
+  static double height_470 = 470.h;
+  static double height_480 = 480.h;
+  static double height_490 = 490.h;
+  static double height_500 = 500.h;
+  static double height_520 = 520.h;
+  static double height_540 = 540.h;
+  static double height_550 = 550.h;
+  static double height_580 = 580.h;
+  static double height_600 = 600.h;
+  static double height_700 = 700.h;
+  static double height_800 = 800.h;
+  static double height_900 = 900.h;
+  static double height_1000 = 1000.h;
+
+  ///Widths => (.w)
+  static double width_5 = 5.w;
+  static double width_8 = 8.w;
+  static double width_10 = 10.w;
+  static double width_15 = 15.w;
+  static double width_20 = 20.w;
+  static double width_25 = 25.w;
+  static double width_30 = 30.w;
+  static double width_35 = 35.w;
+  static double width_40 = 40.w;
+  static double width_45 = 45.w;
+  static double width_50 = 50.w;
+  static double width_60 = 60.w;
+  static double width_70 = 70.w;
+  static double width_80 = 80.w;
+  static double width_90 = 90.w;
+  static double width_100 = 100.w;
+  static double width_110 = 110.w;
+  static double width_125 = 125.w;
+  static double width_140 = 140.w;
+  static double width_150 = 150.w;
+  static double width_160 = 160.w;
+  static double width_170 = 170.w;
+  static double width_180 = 180.w;
+  static double width_200 = 200.w;
+  static double width_226 = 226.w;
+  static double width_255 = 255.w;
+  static double width_290 = 290.w;
+  static double width_300 = 300.w;
+  static double width_310 = 310.w;
+  static double width_320 = 320.w;
+  static double width_330 = 330.w;
+  static double width_350 = 350.w;
+  static double width_430 = 430.w;
+  static double width_460 = 460.w;
+  static double width_600 = 600.w;
+  static double width_700 = 700.w;
+}

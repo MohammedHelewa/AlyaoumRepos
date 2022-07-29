@@ -1,5 +1,6 @@
 import 'package:alyaoum/common/app_libraries.dart';
-import 'package:alyaoum/ui/screens/main_screen/main_screen.dart';
+
+import 'ui/screens/main/main_screen.dart';
 
 void main() {
   runApp(const MyApp());
