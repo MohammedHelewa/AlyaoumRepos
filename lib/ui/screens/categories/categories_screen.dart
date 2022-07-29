@@ -30,7 +30,7 @@ class CategoriesScreen extends StatelessWidget {
             path: 'https://scontent.fgza6-1.fna.fbcdn.net/v/t39.30808-6/225814350_4279480448839950_4408196824546391637_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=lDgW8zc3MLYAX90jK3S&_nc_ht=scontent.fgza6-1.fna&oh=00_AT_NDF_PVyC_m6UuKh3m1ad8PB1HqfwXa6kvuf45H76Cwg&oe=62E86D5F',
             fit: BoxFit.cover,
             radius: Sizes.radius_10,
-            backgroundColor: kGrayColor.withOpacity(0.2),
+            backgroundColor: kLightGrayColor.withOpacity(0.2),
           ),
         ),
     );

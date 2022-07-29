@@ -89,8 +89,8 @@ class _MainScreenState extends State<MainScreen> {
             (index) => BottomNavigationIcons(
               imageName: _mainIcons[index],
               label: _mainLabels[index],
-              iconColor: pageIndex == index ? kPrimaryColor : kGrayColor,
-              fontColor: pageIndex == index ? kPrimaryColor : kGrayColor,
+              iconColor: pageIndex == index ? kPrimaryColor : kLightGrayColor,
+              fontColor: pageIndex == index ? kPrimaryColor : kLightGrayColor,
               onTap: () {
                 setState(() {
                   pageIndex = index;
