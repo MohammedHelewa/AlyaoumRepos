@@ -55,7 +55,7 @@ class _MainScreenState extends State<MainScreen> {
         title: Image.asset('assets/images/logo.png', height: Sizes.height_25),
         centerTitle: true,
         leading: Container(
-          margin: const EdgeInsetsDirectional.fromSTEB(5, 5, 5, 5),
+          margin: const EdgeInsetsDirectional.fromSTEB(10, 8, 5, 8),
           decoration: BoxDecoration(
             color: kLightBlueColor,
             borderRadius: BorderRadius.circular(Sizes.radius_8),

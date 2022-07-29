@@ -11,6 +11,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
+      padding: EdgeInsetsDirectional.fromSTEB(0,0,0,Sizes.height_80),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -21,7 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
             scrollDirection: Axis.horizontal,
               physics: const BouncingScrollPhysics(),
               padding: EdgeInsets.symmetric(
-                  horizontal: Sizes.horizontal_15,
+                  horizontal: Sizes.horizontal_10,
                   vertical: 10.h),
             separatorBuilder: (BuildContext context, int index) => SizedBox(width: 10.w),
             itemBuilder: (context, index) => const ChoiceChip(
@@ -45,8 +46,9 @@ class _HomeScreenState extends State<HomeScreen> {
             shrinkWrap: true,
             physics: const NeverScrollableScrollPhysics(),
             padding: EdgeInsets.symmetric(
-                horizontal: Sizes.horizontal_15,
-                vertical: Sizes.vertical_15),
+                horizontal: Sizes.horizontal_10,
+                vertical: Sizes.vertical_15,
+            ),
             separatorBuilder: (BuildContext context, int index) => SizedBox(height: 15.h),
             itemBuilder: (context, index) => InkWell(
               onTap: () {},
@@ -75,9 +77,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     Expanded(
                         child: Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(
-                          Sizes.horizontal_15,
+                          Sizes.horizontal_10,
                           12.h,
-                          Sizes.horizontal_15,
+                          Sizes.horizontal_10,
                           0),
                       child: Column(children: [
                         const CustomText(

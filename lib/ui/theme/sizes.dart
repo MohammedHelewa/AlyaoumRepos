@@ -66,7 +66,7 @@ class Sizes {
   static double paddingAll_35 = 35.r;
 
   ///Padding symmetric (horizontal => .w) (vertical => .h)
-  static double horizontal_15 = 15.w;
+  static double horizontal_10 = 10.w;
   static double vertical_15 = 15.h;
 
   ///size => (.r)
