@@ -76,6 +76,7 @@ class Sizes {
   static double size_10 = 10.r;
   static double size_15 = 15.r;
   static double size_20 = 20.r;
+  static double size_22 = 22.r;
   static double size_25 = 25.r;
   static double size_30 = 30.r;
   static double size_35 = 35.r;

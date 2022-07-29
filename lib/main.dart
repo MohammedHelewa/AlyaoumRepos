@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
       builder: (context, child) => GetMaterialApp(
         debugShowCheckedModeBanner: false,
         locale: const Locale('ar', 'AR'),
+        fallbackLocale: const Locale('ar'),
         theme: AppTheme.appTheme,
         home: const MainScreen(),
       ),
