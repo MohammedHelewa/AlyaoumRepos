@@ -12,17 +12,17 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  int selectedMenuItemIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       padding: EdgeInsetsDirectional.fromSTEB(0,0,0,Sizes.height_80),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const WeatherComponent(),
-          HotMenuComponent(text: 'اخبار الجالية', selectedMenuItemIndex: selectedMenuItemIndex),
-          const NewsComponent(),
+        children: const [
+          WeatherComponent(),
+          HotMenuComponent(text: 'اخبار الجالية'),
+          NewsComponent(),
         ],
       ),
     );

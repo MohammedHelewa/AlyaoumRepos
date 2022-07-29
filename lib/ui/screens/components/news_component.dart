@@ -72,7 +72,7 @@ class NewsCardComponent extends StatelessWidget {
                         ),
                       ],
                     ),
-                    SizedBox(height: 3.h),
+                    SizedBox(height: Sizes.height_3),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -83,7 +83,7 @@ class NewsCardComponent extends StatelessWidget {
                               backgroundColor: kWhiteColor,
                               side: BorderSide(color: kBlackColor),
                             ),
-                            SizedBox(width: 5.w),
+                            SizedBox(width: Sizes.width_5),
                             const Chip(
                               label: CustomText('24/24', fontSize: 10, fontWeight: FontWeight.w600),
                               backgroundColor: kWhiteColor,
@@ -91,8 +91,8 @@ class NewsCardComponent extends StatelessWidget {
                             ),
                           ],
                         ),
-                        SizedBox(width: 5.w),
-                        IconButton(onPressed: () {}, icon: Icon(Icons.share, size: 24.r))
+                        SizedBox(width: Sizes.width_5),
+                        IconButton(onPressed: () {}, icon: Icon(Icons.share, size: Sizes.iconSize_25))
                       ],
                     ),
                   ],
