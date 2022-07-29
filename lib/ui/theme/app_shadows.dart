@@ -1,12 +1,19 @@
-import 'package:flutter/material.dart';
-
 import '../../common/app_libraries.dart';
 
 class AppShadows {
-  static const List<BoxShadow> boxShadow = <BoxShadow>[
+
+  static const List<BoxShadow> boxShadow03 = <BoxShadow>[
     BoxShadow(
       color: Color(0x29000000),
       offset: Offset(0, 3),
+      blurRadius: 6,
+    ),
+  ];
+
+  static const List<BoxShadow> boxShadow00 = <BoxShadow>[
+    BoxShadow(
+      color: Color(0x29000000),
+      offset: Offset(0, 0),
       blurRadius: 6,
     ),
   ];

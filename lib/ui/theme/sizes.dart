@@ -19,6 +19,7 @@ class Sizes {
   static double iconSize_200 = 200.r;
 
   ///BorderRadius
+  static double radius_3 = 3.r;
   static double radius_8 = 8.r;
   static double radius_10 = 10.r;
   static double radius_15 = 15.r;

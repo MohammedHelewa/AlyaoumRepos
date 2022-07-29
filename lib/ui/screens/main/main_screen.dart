@@ -4,6 +4,7 @@ import 'package:alyaoum/ui/screens/home/home_screen.dart';
 import 'package:alyaoum/ui/screens/prayer/prayer_screen.dart';
 import 'package:alyaoum/ui/screens/sports/sports_screen.dart';
 import 'package:alyaoum/ui/screens/videos/videos_screen.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import 'components/app_drawer_widget.dart';
 import 'components/bottom_navigation_icons.dart';
@@ -62,7 +63,7 @@ class _MainScreenState extends State<MainScreen> {
           ),
           child: IconButton(
               onPressed: () => _scaffoldKey.currentState!.openEndDrawer(),
-              icon: const Icon(Icons.menu, color: kPrimaryColor),
+              icon: SvgPicture.asset('assets/icons/menu_icon.svg', width: Sizes.iconSize_25, height: Sizes.iconSize_25, color: kPrimaryColor),
           ),
         ),
         actions: [
