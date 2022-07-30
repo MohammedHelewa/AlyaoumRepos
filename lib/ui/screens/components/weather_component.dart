@@ -28,8 +28,7 @@ class _WeatherComponentState extends State<WeatherComponent> {
         scrollDirection: Axis.horizontal,
         physics: const BouncingScrollPhysics(),
         padding: EdgeInsets.symmetric(horizontal: Sizes.horizontal_10, vertical: Sizes.height_8),
-        separatorBuilder: (BuildContext context, int index) =>
-            SizedBox(width: Sizes.width_10),
+        separatorBuilder: (BuildContext context, int index) => SizedBox(width: Sizes.width_10),
         itemBuilder: (context, index) => InkWell(
           onTap: ()=> setState(() => _selectedIndex = index),
           splashFactory: NoSplash.splashFactory,

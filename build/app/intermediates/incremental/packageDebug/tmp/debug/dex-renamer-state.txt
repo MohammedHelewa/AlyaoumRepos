@@ -1,4 +1,4 @@
-#Sat Jul 30 13:45:09 EEST 2022
+#Sat Jul 30 15:20:42 EEST 2022
 base.0=C\:\\Users\\moham\\IdeaProjects\\alyaoum\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 renamed.0=classes.dex
 path.0=classes.dex
