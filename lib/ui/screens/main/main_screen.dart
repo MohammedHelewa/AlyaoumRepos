@@ -51,8 +51,6 @@ class _MainScreenState extends State<MainScreen> {
       extendBody: true,
       key: _scaffoldKey,
       appBar: AppBar(
-        backgroundColor: kWhiteColor,
-        elevation: 0.0,
         title: Image.asset('assets/images/logo.png', height: Sizes.height_25),
         centerTitle: true,
         leading: Container(

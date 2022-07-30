@@ -6,6 +6,8 @@ class AppTheme {
     fontFamily: 'Tajawal',
     scaffoldBackgroundColor: kWhiteColor,
     appBarTheme: const AppBarTheme(
+      backgroundColor: kWhiteColor,
+      elevation: 0.0,
       iconTheme: IconThemeData(
         color: kBlackColor,
       )

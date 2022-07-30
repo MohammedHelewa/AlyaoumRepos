@@ -6,6 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Sizes {
   ///IconSizes
+  static double iconSize_15 = 15.r;
   static double iconSize_20 = 20.r;
   static double iconSize_25 = 25.r;
   static double iconSize_30 = 30.r;
@@ -75,6 +76,7 @@ class Sizes {
   static double size_6 = 6.r;
   static double size_8 = 8.r;
   static double size_10 = 10.r;
+  static double size_12 = 12.r;
   static double size_15 = 15.r;
   static double size_20 = 20.r;
   static double size_22 = 22.r;
@@ -180,6 +182,7 @@ class Sizes {
   static double height_1000 = 1000.h;
 
   ///Widths => (.w)
+  static double width_3 = 3.w;
   static double width_5 = 5.w;
   static double width_8 = 8.w;
   static double width_10 = 10.w;

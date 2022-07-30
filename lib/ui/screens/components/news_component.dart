@@ -1,5 +1,7 @@
 import 'package:alyaoum/common/app_libraries.dart';
 
+import '../news_details/news_details_screen.dart';
+
 class NewsComponent extends StatelessWidget {
   const NewsComponent({Key? key}) : super(key: key);
 
@@ -23,7 +25,7 @@ class NewsCardComponent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: () => Get.to(() => const NewsDetailsScreen()),
       borderRadius: BorderRadius.circular(Sizes.radius_10),
       child: Ink(
         width: double.infinity,

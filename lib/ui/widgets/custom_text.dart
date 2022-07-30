@@ -14,6 +14,7 @@ class CustomText extends StatelessWidget {
   final List<Shadow>? shadows;
   final bool isUnderline;
   final double? height;
+  final TextOverflow? textOverflow;
 
   const CustomText(
     this.text, {
@@ -26,6 +27,7 @@ class CustomText extends StatelessWidget {
     this.shadows,
     this.isUnderline = false,
     this.height,
+    this.textOverflow = TextOverflow.ellipsis,
     Key? key,
   }) : super(key: key);
 
@@ -45,7 +47,7 @@ class CustomText extends StatelessWidget {
           height: height
         ),
         maxLines: maxLines,
-        overflow: TextOverflow.ellipsis,
+        overflow: textOverflow,
       ),
     );
   }

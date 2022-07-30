@@ -58,8 +58,8 @@ class NewsVideosCardComponent extends StatelessWidget {
                       style: ButtonStyle(
                         side: MaterialStateProperty.all(const BorderSide(color: kWhiteColor)),
                         shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(Sizes.radius_20))),
-                        minimumSize: MaterialStateProperty.all(Size(Sizes.height_50, Sizes.height_30)),
-                      ), child: const CustomText('سياسة', fontSize: 10, fontWeight: FontWeight.w600, fontColor: Colors.white),
+                        minimumSize: MaterialStateProperty.all(Size(Sizes.width_50, Sizes.height_30)),
+                      ), child: const CustomText('سياسة', fontSize: 10, fontWeight: FontWeight.w600, fontColor: kWhiteColor),
                     ),
                     SizedBox(width: Sizes.width_5),
                     OutlinedButton(
@@ -67,8 +67,8 @@ class NewsVideosCardComponent extends StatelessWidget {
                       style: ButtonStyle(
                         side: MaterialStateProperty.all(const BorderSide(color: kWhiteColor)),
                         shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(Sizes.radius_20))),
-                        minimumSize: MaterialStateProperty.all(Size(Sizes.height_50, Sizes.height_30)),
-                      ), child: const CustomText('24/24', fontSize: 10, fontWeight: FontWeight.w600, fontColor: Colors.white),
+                        minimumSize: MaterialStateProperty.all(Size(Sizes.width_50, Sizes.height_30)),
+                      ), child: const CustomText('24/24', fontSize: 10, fontWeight: FontWeight.w600, fontColor: kWhiteColor),
                     ),
                   ],
                 ),
