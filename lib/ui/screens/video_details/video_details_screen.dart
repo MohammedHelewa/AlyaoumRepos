@@ -1,9 +1,9 @@
 import 'package:alyaoum/common/app_libraries.dart';
 
-import 'components/related_news_component.dart';
+import 'components/related_videos_component.dart';
 
-class NewsDetailsScreen extends StatelessWidget {
-  const NewsDetailsScreen({Key? key}) : super(key: key);
+class NewsVideosScreen extends StatelessWidget {
+  const NewsVideosScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -25,11 +25,19 @@ class NewsDetailsScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const CustomText('برقية من الملك الى امبراطور اليابان على إثر اغتيال الوزير الاول', fontWeight: FontWeight.bold, alignment: AlignmentDirectional.centerStart, fontSize: 22, maxLines: 4),
+                  AppNetworkImage(
+                    path: 'https://api.time.com/wp-content/uploads/2014/03/russia-president-vladimir-putin.jpg?quality=85&w=1500',
+                    fit: BoxFit.cover,
+                    width: double.infinity,
+                    height: Sizes.height_220,
+                    radius: Sizes.radius_10,
+                  ),
                   SizedBox(height: Sizes.height_15),
+                  const CustomText('اصابة ميسي في بداية المبارة وسيطرة الريال', fontWeight: FontWeight.bold, alignment: AlignmentDirectional.centerStart, fontSize: 22, maxLines: 4),
+                  SizedBox(height: Sizes.height_10),
                   Row(
                     children: [
-                     const CircleAvatar(backgroundImage: NetworkImage('https://www.westernunion.com/staticassets/content/dam/wu/jm/responsive/send-money-in-person-from-jamaica-resp.png'),),
+                      const CircleAvatar(backgroundImage: NetworkImage('https://www.westernunion.com/staticassets/content/dam/wu/jm/responsive/send-money-in-person-from-jamaica-resp.png'),),
                       SizedBox(width: Sizes.width_10),
                       const CustomText('اسم الكاتب.', fontWeight: FontWeight.bold, alignment: AlignmentDirectional.centerStart, fontSize: 16),
                       SizedBox(width: Sizes.width_5),
@@ -37,14 +45,6 @@ class NewsDetailsScreen extends StatelessWidget {
                       SizedBox(width: Sizes.width_3),
                       const CustomText('منذ ساعة', fontWeight: FontWeight.w500, alignment: AlignmentDirectional.centerStart, fontSize: 10,fontColor: kLightGrayColor),
                     ],
-                  ),
-                  SizedBox(height: Sizes.height_15),
-                  AppNetworkImage(
-                    path: 'https://api.time.com/wp-content/uploads/2014/03/russia-president-vladimir-putin.jpg?quality=85&w=1500',
-                    fit: BoxFit.cover,
-                    width: double.infinity,
-                    height: Sizes.height_220,
-                    radius: Sizes.radius_10,
                   ),
                   SizedBox(height: Sizes.height_5),
                   Row(
@@ -68,18 +68,8 @@ class NewsDetailsScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(height: Sizes.height_10),
-                  const CustomText('هذا النص هو مثال لنص',
-                      fontWeight: FontWeight.bold,
-                      alignment: AlignmentDirectional.centerStart,
-                      fontColor: kDarkGrayColor,
-                      fontSize: 18,
-                      maxLines: 1,
-                  ),
-                  SizedBox(height: Sizes.height_10),
-                  const CustomText('''إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الفقرات كما تريد، النص لن يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه الخصوص، حيث يحتاج العميل فى كثير من الأحيان أن يطلع على صورة حقيقية لتصميم الموقع.
-ومن هنا وجب على المصمم أن يضع نصوصا مؤقتة على التصميم ليظهر للعميل الشكل كاملاً،دور مولد النص العربى أن يوفر على المصمم عناء البحث عن نص بديل لا علاقة له بالموضوع الذى يتحدث عنه التصميم فيظهر بشكل لا يليق.
-هذا النص يمكن أن يتم تركيبه على أي تصميم دون مشكلة فلن يبدو وكأنه نص منسوخ، غير منظم، غير منسق، أو حتى غير مفهوم. لأنه مازال نصاً بديلاً ومؤقتاً.''',
+                  SizedBox(height: Sizes.height_5),
+                  const CustomText('''يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.''',
                     fontWeight: FontWeight.w500,
                     alignment: AlignmentDirectional.centerStart,
                     fontColor: kGrayColor,
@@ -90,7 +80,7 @@ class NewsDetailsScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: Sizes.height_20),
-            const RelatedNewsComponent(),
+            const RelatedVideosComponent(),
           ],
         ),
       ),

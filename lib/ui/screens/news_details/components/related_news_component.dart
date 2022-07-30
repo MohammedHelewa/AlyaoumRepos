@@ -10,12 +10,15 @@ class RelatedNewsComponent extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const CustomText('اخبار مرتبطة',
-          fontWeight: FontWeight.bold,
-          alignment: AlignmentDirectional.centerStart,
-          fontColor: kDarkGrayColor,
-          fontSize: 18,
-          maxLines: 1,
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: Sizes.horizontal_10),
+          child: const CustomText('اخبار مرتبطة',
+            fontWeight: FontWeight.bold,
+            alignment: AlignmentDirectional.centerStart,
+            fontColor: kDarkGrayColor,
+            fontSize: 18,
+            maxLines: 1,
+          ),
         ),
         SizedBox(height: Sizes.height_15),
         SizedBox(
@@ -60,7 +63,6 @@ class RelatedNewsComponent extends StatelessWidget {
                             fontWeight: FontWeight.bold,
                             fontSize: 12,
                           ),
-                          SizedBox(height: Sizes.height_8),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
