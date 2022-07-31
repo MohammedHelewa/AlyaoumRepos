@@ -54,7 +54,7 @@ class _MainScreenState extends State<MainScreen> {
         extendBody: true,
         key: _scaffoldKey,
         appBar: AppBar(
-          title: Image.asset('assets/images/logo.png', height: Sizes.height_25),
+          title: Image.asset('assets/images/logo.png', height: Sizes.height_25, color: AppTheme.isLightTheme(context)? null : kLightBlueColor),
           centerTitle: true,
           leading: Container(
             margin: const EdgeInsetsDirectional.fromSTEB(10, 8, 5, 8),
@@ -69,6 +69,7 @@ class _MainScreenState extends State<MainScreen> {
           ),
           actions: [
             ThemeSwitcher(
+              clipper: const ThemeSwitcherCircleClipper(),
               builder: (context)=> IconButton(onPressed: () async {
                 var themeName = AppTheme.isLightTheme(context)? 'dark' : 'light';
                 var service = await ThemeService.instance..save(themeName);

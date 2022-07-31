@@ -34,4 +34,12 @@ class AppShadows {
     ),
   ];
 
+  static const List<BoxShadow> darkBoxShadow03 = <BoxShadow>[
+    BoxShadow(
+      color: Color(0xBA000000),
+      offset: Offset(0, 3),
+      blurRadius: 6,
+    ),
+  ];
+
 }

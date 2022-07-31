@@ -32,7 +32,7 @@ class NewsCardComponent extends StatelessWidget {
         height: Sizes.height_400,
         decoration: BoxDecoration(
           color: AppTheme.isLightTheme(context)? kWhiteColor : kPrimaryDarkColor,
-          boxShadow: AppShadows.boxShadow03,
+          boxShadow: AppTheme.isLightTheme(context)? AppShadows.boxShadow03 : AppShadows.darkBoxShadow03,
           borderRadius:
           BorderRadiusDirectional.circular(Sizes.radius_10),
         ),

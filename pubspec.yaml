@@ -41,6 +41,7 @@ dependencies:
   flutter_snake_navigationbar: ^0.6.1
   shared_preferences: ^2.0.15
   animated_theme_switcher: "^2.0.5"
+  youtube_player_flutter: ^8.1.0
 
 dev_dependencies:
   flutter_test:

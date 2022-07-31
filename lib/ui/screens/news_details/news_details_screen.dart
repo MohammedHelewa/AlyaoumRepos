@@ -9,7 +9,7 @@ class NewsDetailsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Image.asset('assets/images/logo.png', height: Sizes.height_25),
+        title: Image.asset('assets/images/logo.png', height: Sizes.height_25, color: AppTheme.isLightTheme(context)? null : kLightBlueColor),
         automaticallyImplyLeading: false,
         actions: [
           IconButton(onPressed: ()=> Get.back(), icon: const Icon(Icons.arrow_forward_rounded)),
@@ -29,7 +29,7 @@ class NewsDetailsScreen extends StatelessWidget {
                   SizedBox(height: Sizes.height_15),
                   Row(
                     children: [
-                     const CircleAvatar(backgroundImage: NetworkImage('https://www.westernunion.com/staticassets/content/dam/wu/jm/responsive/send-money-in-person-from-jamaica-resp.png'),),
+                      CircleAvatar(backgroundImage: const NetworkImage('https://usbeketrica.com/media/88612/download/5be04645b290d.jpg?v=1&inline=1'),backgroundColor: kGrayColor.withOpacity(0.5)),
                       SizedBox(width: Sizes.width_10),
                       CustomText('اسم الكاتب.', fontColor: AppTheme.isLightTheme(context)? kBlackColor : kLightBlueColor,fontWeight: FontWeight.bold, alignment: AlignmentDirectional.centerStart, fontSize: 16),
                       SizedBox(width: Sizes.width_5),

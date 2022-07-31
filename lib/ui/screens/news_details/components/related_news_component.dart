@@ -37,7 +37,7 @@ class RelatedNewsComponent extends StatelessWidget {
                 height: Sizes.height_400,
                 decoration: BoxDecoration(
                   color: AppTheme.isLightTheme(context)? kWhiteColor : kPrimaryDarkColor,
-                  boxShadow: AppShadows.boxShadow03,
+                  boxShadow: AppTheme.isLightTheme(context)? AppShadows.boxShadow03 : AppShadows.darkBoxShadow03,
                   borderRadius:
                   BorderRadiusDirectional.circular(Sizes.radius_10),
                 ),
@@ -46,7 +46,7 @@ class RelatedNewsComponent extends StatelessWidget {
                     Expanded(
                       flex: 2,
                       child: AppNetworkImage(
-                        path: 'https://api.time.com/wp-content/uploads/2014/03/russia-president-vladimir-putin.jpg?quality=85&w=1500',
+                        path: 'https://arabicpost.me/wp-content/uploads/2020/10/---1-21.jpg',
                         fit: BoxFit.cover,
                         width: double.infinity,
                         radius: Sizes.radius_10,

@@ -1,15 +1,47 @@
 import 'package:alyaoum/common/app_libraries.dart';
+import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 import 'components/related_videos_component.dart';
 
-class NewsVideosScreen extends StatelessWidget {
+class NewsVideosScreen extends StatefulWidget {
   const NewsVideosScreen({Key? key}) : super(key: key);
+
+  @override
+  State<NewsVideosScreen> createState() => _NewsVideosScreenState();
+}
+
+class _NewsVideosScreenState extends State<NewsVideosScreen> {
+
+  late YoutubePlayerController _controller;
+
+  @override
+  void initState(){
+    _controller = YoutubePlayerController(
+      initialVideoId: YoutubePlayer.convertUrlToId('https://www.youtube.com/watch?v=xY49FHsP2Hc')!,
+      flags: const YoutubePlayerFlags(
+        autoPlay: false,
+      )
+    );
+    super.initState();
+  }
+
+  @override
+  void deactivate(){
+    _controller.pause();
+    super.deactivate();
+  }
+
+  @override
+  void dispose(){
+    _controller.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Image.asset('assets/images/logo.png', height: Sizes.height_25),
+        title: Image.asset('assets/images/logo.png', height: Sizes.height_25, color: AppTheme.isLightTheme(context)? null : kLightBlueColor),
         automaticallyImplyLeading: false,
         actions: [
           IconButton(onPressed: ()=> Get.back(), icon: const Icon(Icons.arrow_forward_rounded)),
@@ -25,12 +57,13 @@ class NewsVideosScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  AppNetworkImage(
-                    path: 'https://api.time.com/wp-content/uploads/2014/03/russia-president-vladimir-putin.jpg?quality=85&w=1500',
-                    fit: BoxFit.cover,
-                    width: double.infinity,
-                    height: Sizes.height_220,
-                    radius: Sizes.radius_10,
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(Sizes.radius_10),
+                    child: YoutubePlayerBuilder(
+                      player: YoutubePlayer(controller: _controller,
+                      ),
+                      builder: (context, player)=> player,
+                    ),
                   ),
                   SizedBox(height: Sizes.height_15),
                   CustomText('اصابة ميسي في بداية المبارة وسيطرة الريال', fontColor: AppTheme.isLightTheme(context)? kBlackColor : kLightBlueColor, fontWeight: FontWeight.bold, alignment: AlignmentDirectional.centerStart, fontSize: 22, maxLines: 4),

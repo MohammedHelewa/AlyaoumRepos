@@ -36,7 +36,7 @@ class _PrayerTimesComponentState extends State<PrayerTimesComponent> {
           padding: EdgeInsetsDirectional.fromSTEB(Sizes.width_25, Sizes.height_20, 0, Sizes.height_20),
           decoration: BoxDecoration(
             color: kLightBlueColor,
-            boxShadow: AppShadows.boxShadow03,
+            boxShadow: AppTheme.isLightTheme(context)? AppShadows.boxShadow03 : AppShadows.darkBoxShadow03,
             borderRadius: BorderRadius.circular(Sizes.radius_10),
           ),
           child: Column(

@@ -22,8 +22,7 @@ class _UpcomingMatchesComponentState extends State<UpcomingMatchesComponent> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(
-          horizontal: Sizes.horizontal_10, vertical: Sizes.height_5),
+      padding: EdgeInsets.symmetric(horizontal: Sizes.horizontal_10, vertical: Sizes.height_5),
       child: Theme(
         data: ThemeData(dividerColor: Colors.transparent),
         child: ListTileTheme(
@@ -49,10 +48,13 @@ class _UpcomingMatchesComponentState extends State<UpcomingMatchesComponent> {
                 initiallyExpanded = value;
                 setState((){});
               },
-              title: const CustomText('المبارايات القادمة',
+              collapsedIconColor: initiallyExpanded? null : AppTheme.isLightTheme(context)? kBlackColor : kLightBlueColor,
+              title: CustomText('المبارايات القادمة',
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
-                  alignment: AlignmentDirectional.centerStart),
+                  alignment: AlignmentDirectional.centerStart,
+                  fontColor: initiallyExpanded? kBlackColor : AppTheme.isLightTheme(context)? kBlackColor : kLightBlueColor,
+              ),
               tilePadding: EdgeInsets.symmetric(horizontal: Sizes.horizontal_10),
               childrenPadding: EdgeInsetsDirectional.only(start: Sizes.horizontal_10,end: Sizes.horizontal_10,bottom: Sizes.height_8),
               initiallyExpanded: initiallyExpanded,

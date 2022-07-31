@@ -38,7 +38,7 @@ class RelatedVideosComponent extends StatelessWidget {
                   borderRadius: BorderRadius.circular(Sizes.radius_15),
                   color: kGrayColor.withOpacity(0.7),
                   image: const DecorationImage(
-                    image: NetworkImage('https://phantom-marca.unidadeditorial.es/e49a48a8ec39f7e02453841d33a2eb7d/resize/1320/f/jpg/assets/multimedia/imagenes/2022/07/14/16577504854923.jpg'),
+                    image: NetworkImage('https://www.independentarabia.com/sites/default/files/styles/1368x911/public/article/mainimage/2022/04/18/526891-1536223476.jpg?itok=GVOtJNo8'),
                     fit: BoxFit.cover,
                     colorFilter: ColorFilter.mode(Colors.black38, BlendMode.darken),
                   ),

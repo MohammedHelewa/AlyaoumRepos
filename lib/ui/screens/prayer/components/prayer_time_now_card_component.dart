@@ -26,7 +26,7 @@ class _PrayerTimeNowCardComponentState extends State<PrayerTimeNowCardComponent>
       padding: EdgeInsetsDirectional.all(Sizes.paddingAll_8),
       decoration: BoxDecoration(
         color: kLightBlueColor,
-        boxShadow: AppShadows.boxShadow03,
+        boxShadow: AppTheme.isLightTheme(context)? AppShadows.boxShadow03 : AppShadows.darkBoxShadow03,
         borderRadius: BorderRadius.circular(Sizes.radius_10),
       ),
       child: Stack(

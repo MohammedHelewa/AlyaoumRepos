@@ -47,8 +47,9 @@ class _AppDrawerWidgetState extends State<AppDrawerWidget> {
                   decoration: BoxDecoration(color: AppTheme.isLightTheme(context)? kWhiteColor : kPrimaryDarkColor,),
                   child: Image.asset(
                     'assets/images/logo.png',
-                    height: double.infinity,
-                    width: double.infinity,
+                    height: Sizes.size_120,
+                    width: Sizes.size_120,
+                    color: AppTheme.isLightTheme(context)? null : kLightBlueColor,
                   ),
               ),
               Padding(

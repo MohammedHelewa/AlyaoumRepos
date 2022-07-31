@@ -33,6 +33,7 @@ class NewsVideosCardComponent extends StatelessWidget {
         decoration:  BoxDecoration(
           borderRadius: BorderRadius.circular(Sizes.radius_15),
           color: kGrayColor.withOpacity(0.7),
+          boxShadow: AppTheme.isLightTheme(context)? AppShadows.boxShadow03 : AppShadows.darkBoxShadow03,
           image: const DecorationImage(
             image: NetworkImage('https://phantom-marca.unidadeditorial.es/e49a48a8ec39f7e02453841d33a2eb7d/resize/1320/f/jpg/assets/multimedia/imagenes/2022/07/14/16577504854923.jpg'),
             fit: BoxFit.cover,
