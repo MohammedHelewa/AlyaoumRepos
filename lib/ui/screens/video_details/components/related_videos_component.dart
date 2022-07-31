@@ -12,10 +12,10 @@ class RelatedVideosComponent extends StatelessWidget {
       children: [
         Padding(
           padding: EdgeInsets.symmetric(horizontal: Sizes.horizontal_10),
-          child: const CustomText('فيديوهات  مرتبطة',
+          child: CustomText('فيديوهات  مرتبطة',
             fontWeight: FontWeight.bold,
             alignment: AlignmentDirectional.centerStart,
-            fontColor: kDarkGrayColor,
+            fontColor: AppTheme.isLightTheme(context)? kDarkGrayColor : kLightBlueColor,
             fontSize: 18,
             maxLines: 1,
           ),
@@ -31,6 +31,7 @@ class RelatedVideosComponent extends StatelessWidget {
             separatorBuilder: (BuildContext context, int index) => SizedBox(width: Sizes.width_15),
             itemBuilder: (context, index) => InkWell(
               onTap: ()=> {},
+              borderRadius: BorderRadius.circular(Sizes.radius_15),
               child: Ink(
                 width: Sizes.width_290,
                 decoration:  BoxDecoration(

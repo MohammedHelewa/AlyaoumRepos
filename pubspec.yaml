@@ -39,6 +39,8 @@ dependencies:
   flutter_svg: ^1.1.0
   carousel_slider: ^4.1.1
   flutter_snake_navigationbar: ^0.6.1
+  shared_preferences: ^2.0.15
+  animated_theme_switcher: "^2.0.5"
 
 dev_dependencies:
   flutter_test:

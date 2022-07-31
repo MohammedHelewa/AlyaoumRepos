@@ -9,7 +9,7 @@ class MatchesSliderComponent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: kWhiteColor,
+      color: AppTheme.isLightTheme(context)? kWhiteColor : kPrimaryDarkColor,
       padding: EdgeInsetsDirectional.only(top: Sizes.height_5, bottom: Sizes.height_10),
       child: CarouselSlider(
         items: List.generate(

@@ -48,8 +48,8 @@ class _WeatherComponentState extends State<WeatherComponent> {
                       fontSize: _selectedIndex == index ? 18 : 16,
                       fontWeight: FontWeight.bold,
                       fontColor: _selectedIndex == index
-                          ? kBlackColor
-                          : kBlackColor.withOpacity(0.6)),
+                          ? AppTheme.isLightTheme(context)? kBlackColor : kLightBlueColor
+                          : AppTheme.isLightTheme(context)? kBlackColor.withOpacity(0.6) : kLightBlueColor.withOpacity(0.6)),
                   CustomText('15°',
                       fontSize: _selectedIndex == index ? 16 : 12,
                       fontWeight: FontWeight.bold,

@@ -26,4 +26,12 @@ class AppShadows {
     ),
   ];
 
+  static const List<BoxShadow> navBarDarkBoxShadow = [
+    BoxShadow(
+      color: kShadowDarkColor,
+      offset: Offset(15, 15),
+      blurRadius: 50,
+    ),
+  ];
+
 }

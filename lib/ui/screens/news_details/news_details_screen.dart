@@ -25,13 +25,13 @@ class NewsDetailsScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const CustomText('برقية من الملك الى امبراطور اليابان على إثر اغتيال الوزير الاول', fontWeight: FontWeight.bold, alignment: AlignmentDirectional.centerStart, fontSize: 22, maxLines: 4),
+                  CustomText('برقية من الملك الى امبراطور اليابان على إثر اغتيال الوزير الاول', fontWeight: FontWeight.bold, alignment: AlignmentDirectional.centerStart, fontSize: 22, maxLines: 4, fontColor: AppTheme.isLightTheme(context)? kBlackColor : kLightBlueColor,),
                   SizedBox(height: Sizes.height_15),
                   Row(
                     children: [
                      const CircleAvatar(backgroundImage: NetworkImage('https://www.westernunion.com/staticassets/content/dam/wu/jm/responsive/send-money-in-person-from-jamaica-resp.png'),),
                       SizedBox(width: Sizes.width_10),
-                      const CustomText('اسم الكاتب.', fontWeight: FontWeight.bold, alignment: AlignmentDirectional.centerStart, fontSize: 16),
+                      CustomText('اسم الكاتب.', fontColor: AppTheme.isLightTheme(context)? kBlackColor : kLightBlueColor,fontWeight: FontWeight.bold, alignment: AlignmentDirectional.centerStart, fontSize: 16),
                       SizedBox(width: Sizes.width_5),
                       Icon(Icons.access_time_rounded, size: Sizes.size_12,color: kLightGrayColor),
                       SizedBox(width: Sizes.width_3),
@@ -69,10 +69,10 @@ class NewsDetailsScreen extends StatelessWidget {
                     ],
                   ),
                   SizedBox(height: Sizes.height_10),
-                  const CustomText('هذا النص هو مثال لنص',
+                  CustomText('هذا النص هو مثال لنص',
                       fontWeight: FontWeight.bold,
                       alignment: AlignmentDirectional.centerStart,
-                      fontColor: kDarkGrayColor,
+                      fontColor: AppTheme.isLightTheme(context)? kDarkGrayColor : kLightBlueColor,
                       fontSize: 18,
                       maxLines: 1,
                   ),
@@ -94,7 +94,7 @@ class NewsDetailsScreen extends StatelessWidget {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton.extended(onPressed: (){},label: const CustomText('مشاركة',fontColor: kWhiteColor, fontSize: 12,fontWeight: FontWeight.bold),icon: Icon(Icons.share, size: Sizes.iconSize_20)),
+      floatingActionButton: FloatingActionButton.extended(onPressed: (){},label: const CustomText('مشاركة', fontSize: 12,fontWeight: FontWeight.bold, fontColor: kWhiteColor), icon: Icon(Icons.share, size: Sizes.iconSize_20, color: kWhiteColor)),
     );
   }
 }

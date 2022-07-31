@@ -12,10 +12,10 @@ class RelatedNewsComponent extends StatelessWidget {
       children: [
         Padding(
           padding: EdgeInsets.symmetric(horizontal: Sizes.horizontal_10),
-          child: const CustomText('اخبار مرتبطة',
+          child: CustomText('اخبار مرتبطة',
             fontWeight: FontWeight.bold,
             alignment: AlignmentDirectional.centerStart,
-            fontColor: kDarkGrayColor,
+            fontColor: AppTheme.isLightTheme(context)? kDarkGrayColor : kLightBlueColor,
             fontSize: 18,
             maxLines: 1,
           ),
@@ -36,7 +36,7 @@ class RelatedNewsComponent extends StatelessWidget {
                 width: Sizes.width_290,
                 height: Sizes.height_400,
                 decoration: BoxDecoration(
-                  color: kWhiteColor,
+                  color: AppTheme.isLightTheme(context)? kWhiteColor : kPrimaryDarkColor,
                   boxShadow: AppShadows.boxShadow03,
                   borderRadius:
                   BorderRadiusDirectional.circular(Sizes.radius_10),
@@ -56,12 +56,13 @@ class RelatedNewsComponent extends StatelessWidget {
                       padding: EdgeInsetsDirectional.fromSTEB(Sizes.horizontal_10, Sizes.height_15, Sizes.horizontal_10, 0),
                       child: Column(
                         children: [
-                          const CustomText(
+                          CustomText(
                             'برقية من الملك الى امبراطور اليابان على إثر اغتيال الوزير الاول',
                             maxLines: 2,
                             alignment: AlignmentDirectional.centerStart,
                             fontWeight: FontWeight.bold,
                             fontSize: 12,
+                            fontColor: AppTheme.isLightTheme(context)? kBlackColor : kLightBlueColor,
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -71,19 +72,19 @@ class RelatedNewsComponent extends StatelessWidget {
                                   OutlinedButton(
                                     onPressed: null,
                                     style: ButtonStyle(
-                                      side: MaterialStateProperty.all(const BorderSide(color: kBlackColor)),
+                                      side: MaterialStateProperty.all(BorderSide(color: AppTheme.isLightTheme(context)? kBlackColor : kLightBlueColor)),
                                       shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(Sizes.radius_20))),
                                       minimumSize: MaterialStateProperty.all(Size(Sizes.width_50, Sizes.height_25)),
-                                    ), child: const CustomText('سياسة', fontSize: 10, fontWeight: FontWeight.w600),
+                                    ), child: CustomText('سياسة', fontSize: 10, fontWeight: FontWeight.w600, fontColor: AppTheme.isLightTheme(context)? kBlackColor : kLightBlueColor),
                                   ),
                                   SizedBox(width: Sizes.width_5),
                                   OutlinedButton(
                                     onPressed: null,
                                     style: ButtonStyle(
-                                      side: MaterialStateProperty.all(const BorderSide(color: kBlackColor)),
+                                      side: MaterialStateProperty.all(BorderSide(color: AppTheme.isLightTheme(context)? kBlackColor : kLightBlueColor)),
                                       shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(Sizes.radius_20))),
                                       minimumSize: MaterialStateProperty.all(Size(Sizes.width_50, Sizes.height_25)),
-                                    ), child: const CustomText('24/24', fontSize: 10, fontWeight: FontWeight.w600),
+                                    ), child: CustomText('24/24', fontSize: 10, fontWeight: FontWeight.w600, fontColor: AppTheme.isLightTheme(context)? kBlackColor : kLightBlueColor),
                                   ),
                                 ],
                               ),

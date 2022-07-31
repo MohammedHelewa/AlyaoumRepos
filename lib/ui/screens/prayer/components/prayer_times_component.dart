@@ -29,7 +29,7 @@ class _PrayerTimesComponentState extends State<PrayerTimesComponent> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const CustomText('اوقات الصلاة', fontWeight: FontWeight.bold, alignment: AlignmentDirectional.centerStart, fontSize: 24),
+        CustomText('اوقات الصلاة', fontWeight: FontWeight.bold, alignment: AlignmentDirectional.centerStart, fontSize: 24, fontColor: AppTheme.isLightTheme(context)? kBlackColor : kLightBlueColor),
         SizedBox(height: Sizes.height_15),
         Container(
           width: double.infinity,

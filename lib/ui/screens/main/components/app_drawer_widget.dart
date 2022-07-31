@@ -38,13 +38,13 @@ class _AppDrawerWidgetState extends State<AppDrawerWidget> {
     return ClipRRect(
      borderRadius: BorderRadius.only(topRight: Radius.circular(Sizes.radius_15), bottomRight: Radius.circular(Sizes.radius_15)),
       child: Drawer(
-        backgroundColor: kWhiteColor,
+        backgroundColor: AppTheme.isLightTheme(context)? kWhiteColor : kPrimaryDarkColor,
         child: SingleChildScrollView(
           padding: EdgeInsets.zero,
           child: Column(
             children: [
               DrawerHeader(
-                  decoration: const BoxDecoration(color: kWhiteColor),
+                  decoration: BoxDecoration(color: AppTheme.isLightTheme(context)? kWhiteColor : kPrimaryDarkColor,),
                   child: Image.asset(
                     'assets/images/logo.png',
                     height: double.infinity,
@@ -79,6 +79,7 @@ class _AppDrawerWidgetState extends State<AppDrawerWidget> {
                     alignment: AlignmentDirectional.centerStart,
                     fontWeight: FontWeight.w500,
                     fontSize: 16,
+                    fontColor: AppTheme.isLightTheme(context)? kBlackColor : kLightBlueColor,
                   ),
                   leading: SizedBox(
                     height: Sizes.size_22,
@@ -90,7 +91,7 @@ class _AppDrawerWidgetState extends State<AppDrawerWidget> {
                 ),
               ),
               SizedBox(height: Sizes.height_60),
-              const CustomText('مشاركة التطبيق', fontWeight: FontWeight.bold, fontSize: 16),
+              CustomText('مشاركة التطبيق', fontWeight: FontWeight.bold, fontSize: 16, fontColor: AppTheme.isLightTheme(context)? kBlackColor : kLightBlueColor,),
               SizedBox(height: Sizes.height_15),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,

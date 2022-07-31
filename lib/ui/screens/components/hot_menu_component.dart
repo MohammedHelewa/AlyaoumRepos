@@ -32,7 +32,7 @@ class _HotMenuComponentState extends State<HotMenuComponent> {
         itemBuilder: (context, index) => ChoiceChip(
           selected: _selectedMenuItemIndex == index,
           onSelected: (val)=> setState(()=> _selectedMenuItemIndex = index),
-          backgroundColor: kWhiteColor,
+          backgroundColor: AppTheme.isLightTheme(context)? kWhiteColor : kPrimaryDarkColor,
           selectedColor: kLightBlueColor,
           side:  BorderSide(color: _selectedMenuItemIndex == index? kBlackColor : kLightGrayColor),
           label: CustomText(widget.text,

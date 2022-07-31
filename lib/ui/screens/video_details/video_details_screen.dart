@@ -33,13 +33,13 @@ class NewsVideosScreen extends StatelessWidget {
                     radius: Sizes.radius_10,
                   ),
                   SizedBox(height: Sizes.height_15),
-                  const CustomText('اصابة ميسي في بداية المبارة وسيطرة الريال', fontWeight: FontWeight.bold, alignment: AlignmentDirectional.centerStart, fontSize: 22, maxLines: 4),
+                  CustomText('اصابة ميسي في بداية المبارة وسيطرة الريال', fontColor: AppTheme.isLightTheme(context)? kBlackColor : kLightBlueColor, fontWeight: FontWeight.bold, alignment: AlignmentDirectional.centerStart, fontSize: 22, maxLines: 4),
                   SizedBox(height: Sizes.height_10),
                   Row(
                     children: [
                       const CircleAvatar(backgroundImage: NetworkImage('https://www.westernunion.com/staticassets/content/dam/wu/jm/responsive/send-money-in-person-from-jamaica-resp.png'),),
                       SizedBox(width: Sizes.width_10),
-                      const CustomText('اسم الكاتب.', fontWeight: FontWeight.bold, alignment: AlignmentDirectional.centerStart, fontSize: 16),
+                      CustomText('اسم الكاتب.', fontWeight: FontWeight.bold, alignment: AlignmentDirectional.centerStart, fontSize: 16, fontColor: AppTheme.isLightTheme(context)? kBlackColor : kLightBlueColor,),
                       SizedBox(width: Sizes.width_5),
                       Icon(Icons.access_time_rounded, size: Sizes.size_12,color: kLightGrayColor),
                       SizedBox(width: Sizes.width_3),
@@ -84,7 +84,7 @@ class NewsVideosScreen extends StatelessWidget {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton.extended(onPressed: (){},label: const CustomText('مشاركة',fontColor: kWhiteColor, fontSize: 12,fontWeight: FontWeight.bold),icon: Icon(Icons.share, size: Sizes.iconSize_20)),
+      floatingActionButton: FloatingActionButton.extended(onPressed: (){},label: const CustomText('مشاركة', fontSize: 12, fontWeight: FontWeight.bold, fontColor: kWhiteColor), icon: Icon(Icons.share, size: Sizes.iconSize_20, color: kWhiteColor)),
     );
   }
 }

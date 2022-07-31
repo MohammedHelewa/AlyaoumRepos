@@ -31,7 +31,7 @@ class NewsCardComponent extends StatelessWidget {
         width: double.infinity,
         height: Sizes.height_400,
         decoration: BoxDecoration(
-          color: kWhiteColor,
+          color: AppTheme.isLightTheme(context)? kWhiteColor : kPrimaryDarkColor,
           boxShadow: AppShadows.boxShadow03,
           borderRadius:
           BorderRadiusDirectional.circular(Sizes.radius_10),
@@ -52,11 +52,12 @@ class NewsCardComponent extends StatelessWidget {
                   padding: EdgeInsetsDirectional.fromSTEB(Sizes.horizontal_10, Sizes.height_15, Sizes.horizontal_10, 0),
                   child: Column(
                     children: [
-                    const CustomText(
+                      CustomText(
                       'برقية من الملك الى امبراطور اليابان على إثر اغتيال الوزير الاول',
                       maxLines: 2,
                       alignment: AlignmentDirectional.centerStart,
                       fontWeight: FontWeight.w600,
+                      fontColor: AppTheme.isLightTheme(context)? kBlackColor : kLightBlueColor,
                     ),
                     SizedBox(height: Sizes.height_8),
                     Row(

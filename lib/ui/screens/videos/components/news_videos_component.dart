@@ -26,6 +26,7 @@ class NewsVideosCardComponent extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: ()=> Get.to(()=> const NewsVideosScreen()),
+      borderRadius: BorderRadius.circular(Sizes.radius_15),
       child: Ink(
         width: double.infinity,
         height: Sizes.height_300,
