@@ -16,7 +16,6 @@ class _UpcomingMatchesComponentState extends State<UpcomingMatchesComponent> {
     'الدوري',
     'الفرق',
     'الميعاد',
-    'التذكير',
   ];
 
   @override
@@ -50,7 +49,7 @@ class _UpcomingMatchesComponentState extends State<UpcomingMatchesComponent> {
               },
               collapsedIconColor: initiallyExpanded? null : AppTheme.isLightTheme(context)? kBlackColor : kLightBlueColor,
               title: CustomText('المبارايات القادمة',
-                  fontSize: 16,
+                  fontSize: 15,
                   fontWeight: FontWeight.bold,
                   alignment: AlignmentDirectional.centerStart,
                   fontColor: initiallyExpanded? kBlackColor : AppTheme.isLightTheme(context)? kBlackColor : kLightBlueColor,
@@ -69,9 +68,9 @@ class _UpcomingMatchesComponentState extends State<UpcomingMatchesComponent> {
                           padding: EdgeInsetsDirectional.only(bottom: Sizes.height_10),
                           child: CustomText(
                             _columnTitles[index],
-                            alignment: index == 3? AlignmentDirectional.center : AlignmentDirectional.centerStart,
+                            alignment: AlignmentDirectional.centerStart,
                             fontWeight: FontWeight.w500,
-                            fontSize: 15,
+                            fontSize: 12,
                             fontColor: kGrayColor,
                           ),
                         ),
@@ -83,7 +82,7 @@ class _UpcomingMatchesComponentState extends State<UpcomingMatchesComponent> {
                           'المصري',
                           alignment: AlignmentDirectional.centerStart,
                           fontWeight: FontWeight.bold,
-                          fontSize: 15,
+                          fontSize: 12,
                           fontColor: kPrimaryColor,
                         ),
                         Column(
@@ -94,6 +93,7 @@ class _UpcomingMatchesComponentState extends State<UpcomingMatchesComponent> {
                               alignment: AlignmentDirectional.centerStart,
                               fontWeight: FontWeight.w500,
                               fontColor: kBlackColor,
+                                  fontSize: 12,
                             ),
                           ),
                         ),
@@ -101,16 +101,9 @@ class _UpcomingMatchesComponentState extends State<UpcomingMatchesComponent> {
                           '5:45 ص',
                           alignment: AlignmentDirectional.centerStart,
                           fontWeight: FontWeight.bold,
-                          fontSize: 15,
+                          fontSize: 12,
                           fontColor: kPrimaryColor,
                         ),
-                        const Align(
-                          alignment: AlignmentDirectional.center,
-                          child: Icon(
-                            Icons.notifications_rounded,
-                            color: kPrimaryColor,
-                          ),
-                        )
                       ],
                     ),
                   ],

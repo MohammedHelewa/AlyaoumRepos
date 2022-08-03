@@ -42,7 +42,7 @@ class CustomText extends StatelessWidget {
           color: fontColor,
           fontSize: fontSize.sp,
           fontWeight: fontWeight,
-          fontFamily: 'Tajawal',
+          fontFamily: 'NotoKufiArabic',
           decoration: isUnderline ? TextDecoration.underline : null,
           height: height
         ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
 class AppNetworkImage extends StatelessWidget {
   final double? width;
@@ -58,8 +59,11 @@ class AppNetworkImage extends StatelessWidget {
             loadingBuilder: (BuildContext context, Widget child,
                 ImageChunkEvent? loadingProgress) {
               if (loadingProgress == null) return child;
-              return const Center(
-                child: CircularProgressIndicator(),
+              return Lottie.asset(
+                'assets/json/lazy_load.json',
+                fit: BoxFit.cover,
+                height: height,
+                width: width,
               );
             },
             errorBuilder: (context, error, stackTrace) {

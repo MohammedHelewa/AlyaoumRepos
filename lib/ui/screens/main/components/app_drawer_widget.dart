@@ -36,7 +36,7 @@ class _AppDrawerWidgetState extends State<AppDrawerWidget> {
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
-     borderRadius: BorderRadius.only(topRight: Radius.circular(Sizes.radius_15), bottomRight: Radius.circular(Sizes.radius_15)),
+     borderRadius: BorderRadius.only(topLeft: Radius.circular(Sizes.radius_15), bottomLeft: Radius.circular(Sizes.radius_15)),
       child: Drawer(
         backgroundColor: AppTheme.isLightTheme(context)? kWhiteColor : kPrimaryDarkColor,
         child: SingleChildScrollView(
@@ -79,7 +79,6 @@ class _AppDrawerWidgetState extends State<AppDrawerWidget> {
                     _drawerLabels[index],
                     alignment: AlignmentDirectional.centerStart,
                     fontWeight: FontWeight.w500,
-                    fontSize: 16,
                     fontColor: AppTheme.isLightTheme(context)? kBlackColor : kLightBlueColor,
                   ),
                   leading: SizedBox(
@@ -92,7 +91,7 @@ class _AppDrawerWidgetState extends State<AppDrawerWidget> {
                 ),
               ),
               SizedBox(height: Sizes.height_60),
-              CustomText('مشاركة التطبيق', fontWeight: FontWeight.bold, fontSize: 16, fontColor: AppTheme.isLightTheme(context)? kBlackColor : kLightBlueColor,),
+              CustomText('مشاركة التطبيق', fontWeight: FontWeight.bold, fontColor: AppTheme.isLightTheme(context)? kBlackColor : kLightBlueColor,),
               SizedBox(height: Sizes.height_15),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,

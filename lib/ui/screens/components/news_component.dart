@@ -1,5 +1,6 @@
 import 'package:alyaoum/common/app_libraries.dart';
 
+import '../../widgets/custom_outlined_button.dart';
 import '../news_details/news_details_screen.dart';
 
 class NewsComponent extends StatelessWidget {
@@ -39,7 +40,7 @@ class NewsCardComponent extends StatelessWidget {
         child: Column(
           children: [
             Expanded(
-              flex: 2,
+              flex: 3,
               child: AppNetworkImage(
                 path: 'https://api.time.com/wp-content/uploads/2014/03/russia-president-vladimir-putin.jpg?quality=85&w=1500',
                 fit: BoxFit.cover,
@@ -48,6 +49,7 @@ class NewsCardComponent extends StatelessWidget {
               ),
             ),
             Expanded(
+              flex: 2,
                 child: Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(Sizes.horizontal_10, Sizes.height_15, Sizes.horizontal_10, 0),
                   child: Column(
@@ -59,16 +61,16 @@ class NewsCardComponent extends StatelessWidget {
                       fontWeight: FontWeight.w600,
                       fontColor: AppTheme.isLightTheme(context)? kBlackColor : kLightBlueColor,
                     ),
-                    SizedBox(height: Sizes.height_8),
+                    SizedBox(height: Sizes.height_5),
                     Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Icon(Icons.access_time_rounded, color: kLightGrayColor, size: Sizes.radius_15),
+                        Icon(Icons.access_time_rounded, color: kLightGrayColor, size: Sizes.size_12),
                         SizedBox(width: 3.w),
                         const CustomText(
                           'اليوم',
                           maxLines: 2,
-                          fontSize: 12,
+                          fontSize: 9,
                           fontColor: kLightGrayColor,
                           fontWeight: FontWeight.w500,
                           alignment: AlignmentDirectional.centerStart,
@@ -81,17 +83,9 @@ class NewsCardComponent extends StatelessWidget {
                       children: [
                         Row(
                           children: [
-                            const Chip(
-                              label: CustomText('سياسة', fontSize: 10, fontWeight: FontWeight.w600),
-                              backgroundColor: kWhiteColor,
-                              side: BorderSide(color: kBlackColor),
-                            ),
+                            const CustomOutlinedButton(text: 'سياسة'),
                             SizedBox(width: Sizes.width_5),
-                            const Chip(
-                              label: CustomText('24/24', fontSize: 10, fontWeight: FontWeight.w600),
-                              backgroundColor: kWhiteColor,
-                              side: BorderSide(color: kBlackColor),
-                            ),
+                            const CustomOutlinedButton(text: '24/24'),
                           ],
                         ),
                         SizedBox(width: Sizes.width_5),

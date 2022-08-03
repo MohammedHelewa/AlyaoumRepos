@@ -22,7 +22,7 @@ class _HotMenuComponentState extends State<HotMenuComponent> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: Sizes.height_50,
+      height: Sizes.height_45,
       child: ListView.separated(
         itemCount: 10,
         scrollDirection: Axis.horizontal,
@@ -35,8 +35,9 @@ class _HotMenuComponentState extends State<HotMenuComponent> {
           backgroundColor: AppTheme.isLightTheme(context)? kWhiteColor : kPrimaryDarkColor,
           selectedColor: kLightBlueColor,
           side:  BorderSide(color: _selectedMenuItemIndex == index? kBlackColor : kLightGrayColor),
+          padding: const EdgeInsetsDirectional.only(bottom: 5),
           label: CustomText(widget.text,
-            fontSize: 14,
+            fontSize: 10,
             fontWeight: _selectedMenuItemIndex == index? FontWeight.w600 : FontWeight.w500,
             fontColor: _selectedMenuItemIndex == index? kPrimaryColor : kLightGrayColor,
           ),

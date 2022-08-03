@@ -12,16 +12,15 @@ class _PrayerTimesComponentState extends State<PrayerTimesComponent> {
     'الصلاة',
     'الاذان',
     'الإقامة',
-    'التنبيه',
   ];
 
   final List<PrayerModel> _prayersList = const [
-    PrayerModel('الفجر', '5:30 ص', '5:45 ص', Icons.notifications_rounded),
-    PrayerModel('الشروق', '5:30 ص', '5:45 ص', Icons.notifications_rounded),
-    PrayerModel('الظهر', '5:30 ص', '5:45 ص', Icons.notifications_rounded),
-    PrayerModel('العصر', '5:30 ص', '5:45 ص', Icons.notifications_off_rounded),
-    PrayerModel('المغرب', '5:30 ص', '5:45 ص', Icons.notifications_rounded),
-    PrayerModel('العشاء', '5:30 ص', '5:45 ص', Icons.notifications_rounded),
+    PrayerModel('الفجر', '5:30 ص', '5:45 ص'),
+    PrayerModel('الشروق', '5:30 ص', '5:45 ص'),
+    PrayerModel('الظهر', '5:30 ص', '5:45 ص'),
+    PrayerModel('العصر', '5:30 ص', '5:45 ص'),
+    PrayerModel('المغرب', '5:30 ص', '5:45 ص'),
+    PrayerModel('العشاء', '5:30 ص', '5:45 ص'),
   ];
 
   @override
@@ -29,11 +28,11 @@ class _PrayerTimesComponentState extends State<PrayerTimesComponent> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        CustomText('اوقات الصلاة', fontWeight: FontWeight.bold, alignment: AlignmentDirectional.centerStart, fontSize: 24, fontColor: AppTheme.isLightTheme(context)? kBlackColor : kLightBlueColor),
+        CustomText('أوقات الصلاة', fontWeight: FontWeight.bold, alignment: AlignmentDirectional.centerStart, fontSize: 20, fontColor: AppTheme.isLightTheme(context)? kBlackColor : kLightBlueColor),
         SizedBox(height: Sizes.height_15),
         Container(
           width: double.infinity,
-          padding: EdgeInsetsDirectional.fromSTEB(Sizes.width_25, Sizes.height_20, 0, Sizes.height_20),
+          padding: EdgeInsetsDirectional.fromSTEB(0, Sizes.height_20, 0, Sizes.height_20),
           decoration: BoxDecoration(
             color: kLightBlueColor,
             boxShadow: AppTheme.isLightTheme(context)? AppShadows.boxShadow03 : AppShadows.darkBoxShadow03,
@@ -48,13 +47,10 @@ class _PrayerTimesComponentState extends State<PrayerTimesComponent> {
                     children: List.generate(
                       _columnTitles.length,
                       (index) => Padding(
-                        padding: EdgeInsetsDirectional.only(bottom: Sizes.height_10),
+                        padding: EdgeInsetsDirectional.only(bottom: Sizes.height_5),
                         child: CustomText(
                           _columnTitles[index],
-                          alignment: index == 3
-                              ? AlignmentDirectional.center
-                              : AlignmentDirectional.centerStart,
-                          fontSize: 15,
+                          fontSize: 14,
                           fontColor: kGrayColor,
                           fontWeight: FontWeight.w500,
                         ),
@@ -70,31 +66,27 @@ class _PrayerTimesComponentState extends State<PrayerTimesComponent> {
                           children: [
                             CustomText(
                               e.prayerName,
-                              height: 3.5,
+                              height: 3,
+                              fontSize: 12.5,
                               fontWeight: FontWeight.bold,
-                              alignment: AlignmentDirectional.centerStart,
                             ),
                             Column(
                               children: List.generate(
                                 1,
                                 (index) => CustomText(
                                   e.adanTime,
-                                  alignment: AlignmentDirectional.centerStart,
                                   fontWeight: FontWeight.bold,
-                                  height: 3.5,
+                                  height: 3,
+                                  fontSize: 12.5,
                                 ),
                               ),
                             ),
                             CustomText(
                               e.prayerTime,
-                              alignment: AlignmentDirectional.centerStart,
                               fontWeight: FontWeight.bold,
-                              height: 3.5,
+                              height: 3,
+                              fontSize: 12.5,
                             ),
-                            Align(
-                              alignment: AlignmentDirectional.center,
-                              child: Icon(e.notificationIcon, color: e.notificationIcon == Icons.notifications_off_rounded ? kLightGrayColor : kPrimaryColor),
-                            )
                           ],
                         ))
                     .toList(),
@@ -109,7 +101,6 @@ class _PrayerTimesComponentState extends State<PrayerTimesComponent> {
 
 class PrayerModel {
   final String prayerName, adanTime, prayerTime;
-  final IconData notificationIcon;
 
-  const PrayerModel(this.prayerName, this.adanTime, this.prayerTime, this.notificationIcon);
+  const PrayerModel(this.prayerName, this.adanTime, this.prayerTime);
 }

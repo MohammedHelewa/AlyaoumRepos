@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class AppTheme {
   static final lightTheme = ThemeData(
-    fontFamily: 'Tajawal',
+    fontFamily: 'NotoKufiArabic',
     colorScheme:  const ColorScheme.light(
       secondary: kPrimaryColor,
       primary: kPrimaryColor,
@@ -20,7 +20,7 @@ class AppTheme {
   );
 
   static final darkTheme = ThemeData(
-    fontFamily: 'Tajawal',
+    fontFamily: 'NotoKufiArabic',
     colorScheme: const ColorScheme.dark(
       secondary: kPrimaryColor,
       primary: kPrimaryColor,

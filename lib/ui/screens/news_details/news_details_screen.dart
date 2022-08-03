@@ -1,5 +1,6 @@
 import 'package:alyaoum/common/app_libraries.dart';
 
+import '../../widgets/custom_outlined_button.dart';
 import 'components/related_news_component.dart';
 
 class NewsDetailsScreen extends StatelessWidget {
@@ -25,13 +26,13 @@ class NewsDetailsScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  CustomText('برقية من الملك الى امبراطور اليابان على إثر اغتيال الوزير الاول', fontWeight: FontWeight.bold, alignment: AlignmentDirectional.centerStart, fontSize: 22, maxLines: 4, fontColor: AppTheme.isLightTheme(context)? kBlackColor : kLightBlueColor,),
+                  CustomText('برقية من الملك الى امبراطور اليابان على إثر اغتيال الوزير الاول', fontWeight: FontWeight.bold, alignment: AlignmentDirectional.centerStart, fontSize: 18, maxLines: 4, fontColor: AppTheme.isLightTheme(context)? kBlackColor : kLightBlueColor,),
                   SizedBox(height: Sizes.height_15),
                   Row(
                     children: [
                       CircleAvatar(backgroundImage: const NetworkImage('https://usbeketrica.com/media/88612/download/5be04645b290d.jpg?v=1&inline=1'),backgroundColor: kGrayColor.withOpacity(0.5)),
                       SizedBox(width: Sizes.width_10),
-                      CustomText('اسم الكاتب.', fontColor: AppTheme.isLightTheme(context)? kBlackColor : kLightBlueColor,fontWeight: FontWeight.bold, alignment: AlignmentDirectional.centerStart, fontSize: 16),
+                      CustomText('اسم الكاتب.', fontColor: AppTheme.isLightTheme(context)? kBlackColor : kLightBlueColor,fontWeight: FontWeight.bold, alignment: AlignmentDirectional.centerStart, fontSize: 12),
                       SizedBox(width: Sizes.width_5),
                       Icon(Icons.access_time_rounded, size: Sizes.size_12,color: kLightGrayColor),
                       SizedBox(width: Sizes.width_3),
@@ -49,23 +50,9 @@ class NewsDetailsScreen extends StatelessWidget {
                   SizedBox(height: Sizes.height_5),
                   Row(
                     children: [
-                      OutlinedButton(
-                        onPressed: null,
-                        style: ButtonStyle(
-                          side: MaterialStateProperty.all(const BorderSide(color: kGrayColor)),
-                          shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(Sizes.radius_20))),
-                          minimumSize: MaterialStateProperty.all(Size(Sizes.width_50, Sizes.height_25)),
-                        ), child: const CustomText('سياسة', fontSize: 10, fontWeight: FontWeight.w600, fontColor: kGrayColor),
-                      ),
+                      const CustomOutlinedButton(text: 'سياسة'),
                       SizedBox(width: Sizes.width_5),
-                      OutlinedButton(
-                        onPressed: null,
-                        style: ButtonStyle(
-                          side: MaterialStateProperty.all(const BorderSide(color: kGrayColor)),
-                          shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(Sizes.radius_20))),
-                          minimumSize: MaterialStateProperty.all(Size(Sizes.width_50, Sizes.height_25)),
-                        ), child: const CustomText('24/24', fontSize: 10, fontWeight: FontWeight.w600, fontColor: kGrayColor),
-                      ),
+                      const CustomOutlinedButton(text: '24/24'),
                     ],
                   ),
                   SizedBox(height: Sizes.height_10),
@@ -73,7 +60,6 @@ class NewsDetailsScreen extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                       alignment: AlignmentDirectional.centerStart,
                       fontColor: AppTheme.isLightTheme(context)? kDarkGrayColor : kLightBlueColor,
-                      fontSize: 18,
                       maxLines: 1,
                   ),
                   SizedBox(height: Sizes.height_10),
@@ -83,8 +69,9 @@ class NewsDetailsScreen extends StatelessWidget {
                     fontWeight: FontWeight.w500,
                     alignment: AlignmentDirectional.centerStart,
                     fontColor: kGrayColor,
+                    fontSize: 12,
                     textOverflow: null,
-                    height: 1.4,
+                    height: 1.8,
                   ),
                 ],
               ),

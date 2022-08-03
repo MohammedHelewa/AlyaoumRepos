@@ -16,7 +16,7 @@ class RelatedVideosComponent extends StatelessWidget {
             fontWeight: FontWeight.bold,
             alignment: AlignmentDirectional.centerStart,
             fontColor: AppTheme.isLightTheme(context)? kDarkGrayColor : kLightBlueColor,
-            fontSize: 18,
+            fontSize: 16,
             maxLines: 1,
           ),
         ),
@@ -53,7 +53,7 @@ class RelatedVideosComponent extends StatelessWidget {
                         maxLines: 2,
                         alignment: AlignmentDirectional.centerStart,
                         fontWeight: FontWeight.bold,
-                        fontSize: 12,
+                        fontSize: 10,
                         fontColor: kWhiteColor,
                       ),
                       Row(

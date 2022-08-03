@@ -37,11 +37,11 @@ dependencies:
   get: ^4.6.5
   flutter_screenutil: ^5.5.3+2
   flutter_svg: ^1.1.0
-  carousel_slider: ^4.1.1
   flutter_snake_navigationbar: ^0.6.1
   shared_preferences: ^2.0.15
   animated_theme_switcher: "^2.0.5"
   youtube_player_flutter: ^8.1.0
+  lottie: ^1.4.0
 
 dev_dependencies:
   flutter_test:
@@ -69,6 +69,7 @@ flutter:
   assets:
       - assets/icons/
       - assets/images/
+      - assets/json/
 #     - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -83,19 +84,19 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: Tajawal
+    - family: NotoKufiArabic
       fonts:
-        - asset: assets/fonts/Tajawal-ExtraLight.ttf
+        - asset: assets/fonts/NotoKufiArabic-ExtraLight.ttf
           weight: 200
-        - asset: assets/fonts/Tajawal-Light.ttf
+        - asset: assets/fonts/NotoKufiArabic-Light.ttf
           weight: 300
-        - asset: assets/fonts/Tajawal-Regular.ttf
+        - asset: assets/fonts/NotoKufiArabic-Regular.ttf
           weight: 400
-        - asset: assets/fonts/Tajawal-Medium.ttf
+        - asset: assets/fonts/NotoKufiArabic-Medium.ttf
           weight: 500
-        - asset: assets/fonts/Tajawal-Bold.ttf
+        - asset: assets/fonts/NotoKufiArabic-Bold.ttf
           weight: 600
-        - asset: assets/fonts/Tajawal-ExtraBold.ttf
+        - asset: assets/fonts/NotoKufiArabic-ExtraBold.ttf
           weight: 700
   # fonts:
   #   - family: Schyler

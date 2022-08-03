@@ -1,6 +1,7 @@
 import 'package:alyaoum/common/app_libraries.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
+import '../../widgets/custom_outlined_button.dart';
 import 'components/related_videos_component.dart';
 
 class NewsVideosScreen extends StatefulWidget {
@@ -19,7 +20,8 @@ class _NewsVideosScreenState extends State<NewsVideosScreen> {
     _controller = YoutubePlayerController(
       initialVideoId: YoutubePlayer.convertUrlToId('https://www.youtube.com/watch?v=xY49FHsP2Hc')!,
       flags: const YoutubePlayerFlags(
-        autoPlay: false,
+        autoPlay: true,
+        hideThumbnail: true,
       )
     );
     super.initState();
@@ -61,18 +63,20 @@ class _NewsVideosScreenState extends State<NewsVideosScreen> {
                     borderRadius: BorderRadius.circular(Sizes.radius_10),
                     child: YoutubePlayerBuilder(
                       player: YoutubePlayer(controller: _controller,
+                      // thumbnail: const Icon(Icons.play_arrow,color: Colors.red, size: 100),
+                        showVideoProgressIndicator: false,
                       ),
                       builder: (context, player)=> player,
                     ),
                   ),
                   SizedBox(height: Sizes.height_15),
-                  CustomText('اصابة ميسي في بداية المبارة وسيطرة الريال', fontColor: AppTheme.isLightTheme(context)? kBlackColor : kLightBlueColor, fontWeight: FontWeight.bold, alignment: AlignmentDirectional.centerStart, fontSize: 22, maxLines: 4),
+                  CustomText('اصابة ميسي في بداية المبارة وسيطرة الريال', fontColor: AppTheme.isLightTheme(context)? kBlackColor : kLightBlueColor, fontWeight: FontWeight.bold, alignment: AlignmentDirectional.centerStart, fontSize: 16, maxLines: 4),
                   SizedBox(height: Sizes.height_10),
                   Row(
                     children: [
                       const CircleAvatar(backgroundImage: NetworkImage('https://www.westernunion.com/staticassets/content/dam/wu/jm/responsive/send-money-in-person-from-jamaica-resp.png'),),
                       SizedBox(width: Sizes.width_10),
-                      CustomText('اسم الكاتب.', fontWeight: FontWeight.bold, alignment: AlignmentDirectional.centerStart, fontSize: 16, fontColor: AppTheme.isLightTheme(context)? kBlackColor : kLightBlueColor,),
+                      CustomText('اسم الكاتب.', fontWeight: FontWeight.bold, alignment: AlignmentDirectional.centerStart, fontSize: 12, fontColor: AppTheme.isLightTheme(context)? kBlackColor : kLightBlueColor,),
                       SizedBox(width: Sizes.width_5),
                       Icon(Icons.access_time_rounded, size: Sizes.size_12,color: kLightGrayColor),
                       SizedBox(width: Sizes.width_3),
@@ -82,23 +86,9 @@ class _NewsVideosScreenState extends State<NewsVideosScreen> {
                   SizedBox(height: Sizes.height_5),
                   Row(
                     children: [
-                      OutlinedButton(
-                        onPressed: null,
-                        style: ButtonStyle(
-                          side: MaterialStateProperty.all(const BorderSide(color: kGrayColor)),
-                          shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(Sizes.radius_20))),
-                          minimumSize: MaterialStateProperty.all(Size(Sizes.width_50, Sizes.height_25)),
-                        ), child: const CustomText('سياسة', fontSize: 10, fontWeight: FontWeight.w600, fontColor: kGrayColor),
-                      ),
+                      const CustomOutlinedButton(text: 'سياسة'),
                       SizedBox(width: Sizes.width_5),
-                      OutlinedButton(
-                        onPressed: null,
-                        style: ButtonStyle(
-                          side: MaterialStateProperty.all(const BorderSide(color: kGrayColor)),
-                          shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(Sizes.radius_20))),
-                          minimumSize: MaterialStateProperty.all(Size(Sizes.width_50, Sizes.height_25)),
-                        ), child: const CustomText('24/24', fontSize: 10, fontWeight: FontWeight.w600, fontColor: kGrayColor),
-                      ),
+                      const CustomOutlinedButton(text: '24/24'),
                     ],
                   ),
                   SizedBox(height: Sizes.height_5),
@@ -107,7 +97,8 @@ class _NewsVideosScreenState extends State<NewsVideosScreen> {
                     alignment: AlignmentDirectional.centerStart,
                     fontColor: kGrayColor,
                     textOverflow: null,
-                    height: 1.4,
+                    height: 1.8,
+                    fontSize: 12,
                   ),
                 ],
               ),

@@ -29,7 +29,7 @@ class BottomNavigationIcons extends StatelessWidget {
           children: [
             SvgPicture.asset(imageName, color: iconColor),
             SizedBox(height: Sizes.height_8),
-            CustomText(label, fontColor: fontColor, fontWeight: FontWeight.bold, fontSize: 12),
+            CustomText(label, fontColor: fontColor, fontWeight: FontWeight.bold, fontSize: 10),
           ],
         ),
       ),

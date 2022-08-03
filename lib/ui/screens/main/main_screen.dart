@@ -63,7 +63,7 @@ class _MainScreenState extends State<MainScreen> {
               borderRadius: BorderRadius.circular(Sizes.radius_8),
             ),
             child: IconButton(
-                onPressed: () => _scaffoldKey.currentState!.openEndDrawer(),
+                onPressed: () => _scaffoldKey.currentState!.openDrawer(),
                 icon: SvgPicture.asset('assets/icons/menu_icon.svg', width: Sizes.iconSize_25, height: Sizes.iconSize_25, color: kPrimaryColor),
             ),
           ),
@@ -110,7 +110,7 @@ class _MainScreenState extends State<MainScreen> {
             ),
           ),
         ),
-        endDrawer: const AppDrawerWidget(),
+        drawer: const AppDrawerWidget(),
       ),
       ),
     );

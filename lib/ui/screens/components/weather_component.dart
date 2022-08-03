@@ -38,6 +38,7 @@ class _WeatherComponentState extends State<WeatherComponent> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   CustomText('اليوم',
+                      fontSize: 12,
                       fontWeight: _selectedIndex == index
                           ? FontWeight.bold
                           : FontWeight.w500,
@@ -45,13 +46,13 @@ class _WeatherComponentState extends State<WeatherComponent> {
                           ? kPrimaryColor
                           : kLightGrayColor),
                   CustomText('24°',
-                      fontSize: _selectedIndex == index ? 18 : 16,
+                      fontSize: _selectedIndex == index ? 14 : 12,
                       fontWeight: FontWeight.bold,
                       fontColor: _selectedIndex == index
                           ? AppTheme.isLightTheme(context)? kBlackColor : kLightBlueColor
                           : AppTheme.isLightTheme(context)? kBlackColor.withOpacity(0.6) : kLightBlueColor.withOpacity(0.6)),
                   CustomText('15°',
-                      fontSize: _selectedIndex == index ? 16 : 12,
+                      fontSize: 12,
                       fontWeight: FontWeight.bold,
                       fontColor: _selectedIndex == index
                           ? kGrayColor

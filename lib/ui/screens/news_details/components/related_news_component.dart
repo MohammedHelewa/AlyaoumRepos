@@ -1,5 +1,7 @@
 import 'package:alyaoum/common/app_libraries.dart';
 
+import '../../../widgets/custom_outlined_button.dart';
+
 class RelatedNewsComponent extends StatelessWidget {
   const RelatedNewsComponent({
     Key? key,
@@ -16,7 +18,7 @@ class RelatedNewsComponent extends StatelessWidget {
             fontWeight: FontWeight.bold,
             alignment: AlignmentDirectional.centerStart,
             fontColor: AppTheme.isLightTheme(context)? kDarkGrayColor : kLightBlueColor,
-            fontSize: 18,
+            fontSize: 16,
             maxLines: 1,
           ),
         ),
@@ -61,7 +63,7 @@ class RelatedNewsComponent extends StatelessWidget {
                             maxLines: 2,
                             alignment: AlignmentDirectional.centerStart,
                             fontWeight: FontWeight.bold,
-                            fontSize: 12,
+                            fontSize: 10,
                             fontColor: AppTheme.isLightTheme(context)? kBlackColor : kLightBlueColor,
                           ),
                           Row(
@@ -69,22 +71,12 @@ class RelatedNewsComponent extends StatelessWidget {
                             children: [
                               Row(
                                 children: [
-                                  OutlinedButton(
-                                    onPressed: null,
-                                    style: ButtonStyle(
-                                      side: MaterialStateProperty.all(BorderSide(color: AppTheme.isLightTheme(context)? kBlackColor : kLightBlueColor)),
-                                      shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(Sizes.radius_20))),
-                                      minimumSize: MaterialStateProperty.all(Size(Sizes.width_50, Sizes.height_25)),
-                                    ), child: CustomText('سياسة', fontSize: 10, fontWeight: FontWeight.w600, fontColor: AppTheme.isLightTheme(context)? kBlackColor : kLightBlueColor),
-                                  ),
-                                  SizedBox(width: Sizes.width_5),
-                                  OutlinedButton(
-                                    onPressed: null,
-                                    style: ButtonStyle(
-                                      side: MaterialStateProperty.all(BorderSide(color: AppTheme.isLightTheme(context)? kBlackColor : kLightBlueColor)),
-                                      shape: MaterialStateProperty.all(RoundedRectangleBorder(borderRadius: BorderRadius.circular(Sizes.radius_20))),
-                                      minimumSize: MaterialStateProperty.all(Size(Sizes.width_50, Sizes.height_25)),
-                                    ), child: CustomText('24/24', fontSize: 10, fontWeight: FontWeight.w600, fontColor: AppTheme.isLightTheme(context)? kBlackColor : kLightBlueColor),
+                                  Row(
+                                    children: [
+                                      const CustomOutlinedButton(text: 'سياسة'),
+                                      SizedBox(width: Sizes.width_5),
+                                      const CustomOutlinedButton(text: '24/24'),
+                                    ],
                                   ),
                                 ],
                               ),

@@ -43,8 +43,8 @@ class _PrayerTimeNowCardComponentState extends State<PrayerTimeNowCardComponent>
                     Image.asset(_weatherImage[3], scale: 2),
                     Column(
                       children: const [
-                        CustomText('° 30', fontWeight: FontWeight.bold,alignment: AlignmentDirectional.centerStart, fontSize: 18),
-                        CustomText('° 14', fontColor: kGrayColor, fontWeight: FontWeight.w500,alignment: AlignmentDirectional.centerStart, fontSize: 16),
+                        CustomText('° 30', fontWeight: FontWeight.bold,alignment: AlignmentDirectional.centerStart, fontSize: 14, height: 0),
+                        CustomText('° 14', fontColor: kGrayColor, fontWeight: FontWeight.w500,alignment: AlignmentDirectional.centerStart, fontSize: 14, height: 0),
                       ],
                     ),
                   ],
@@ -55,14 +55,11 @@ class _PrayerTimeNowCardComponentState extends State<PrayerTimeNowCardComponent>
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const CustomText('باقي على', fontColor: kGrayColor, fontWeight: FontWeight.w500,alignment: AlignmentDirectional.centerStart),
-                    SizedBox(height: Sizes.height_3),
-                    const CustomText('صلاة الظهر', fontColor: kPrimaryColor, fontWeight: FontWeight.bold,fontSize: 18,alignment: AlignmentDirectional.centerStart),
-                    SizedBox(height: Sizes.height_3),
-                    const CustomText('5:30 ص', fontColor: kGrayColor, fontWeight: FontWeight.w500,alignment: AlignmentDirectional.centerStart),
-                    SizedBox(height: Sizes.height_3),
-                    const CustomText('00 : 10 :30', fontColor: kGreenColor, fontWeight: FontWeight.bold,fontSize: 16,alignment: AlignmentDirectional.centerStart),
+                  children: const [
+                    CustomText('باقي على', fontColor: kGrayColor, fontWeight: FontWeight.w500,alignment: AlignmentDirectional.centerStart),
+                    CustomText('صلاة الظهر', fontColor: kPrimaryColor, fontWeight: FontWeight.bold,fontSize: 16,alignment: AlignmentDirectional.centerStart),
+                    CustomText('5:30 ص', fontColor: kGrayColor, fontWeight: FontWeight.w500,alignment: AlignmentDirectional.centerStart),
+                    CustomText('00 : 10 :30', fontColor: kGreenColor, fontWeight: FontWeight.bold,fontSize: 14,alignment: AlignmentDirectional.centerStart),
                   ],
                 ),
               ),
